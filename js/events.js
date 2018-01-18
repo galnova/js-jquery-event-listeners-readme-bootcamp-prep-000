@@ -1,25 +1,33 @@
 //define functions here
 
+function getIt() {
+  $('p').on("click", function () {
+    alert("Hey!");
+  });
+}
+
+function frameIt() {
+  $('img').on("load", function() {
+    $('img').addClass("tasty");
+  });
+}
+
+function pressIt() {
+  $('#typing').on("keydown", function(press) {
+    if (press.which === 71) {
+      alert("You have entered g.");
+    }
+  });
+}
+
+function submitIt() {
+  $('form').on("submit", function() {
+    alert("Your form is going to be submitted now.");
+  });
+}
+
 $(document).ready(function(){
 
-function paragraphSelector(){
-  return $('p');
-}
-
-function lastImageSelector(){
-  return $('img:last');
-}
-
-function ninjaBabySelector(){
-  return $('#baby-ninja');
-}
-
-function divSelector(){
-  return $('.pics');
-}
-
-function firstListItem(){
-  return $('#pic-list li:first-child')
-}
+// call functions here
 
 });
